@@ -1,0 +1,612 @@
+
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f3eb">
+  <meta name="description" content="En undskyldning til Betina">
+  <title>Undskyld, Betina ❤️</title>
+
+  <style>
+    :root {
+      --bg: #f6f3eb;
+      --ink: #282927;
+      --muted: #686861;
+      --red: #ad4e49;
+      --paper: #fffefb;
+      --line: #dfddd3;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 16px/1.7 -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--red);
+      outline-offset: 5px;
+    }
+
+    ::selection {
+      background: #edcdba;
+    }
+
+    .frame {
+      max-width: 1050px;
+      padding: 0 30px;
+      margin: 0 auto;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      padding-top: 25px;
+      padding-bottom: 24px;
+    }
+
+    .wordmark {
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 720;
+      font-size: 14px;
+      letter-spacing: -.03em;
+    }
+
+    .wordmark span {
+      color: var(--red);
+      margin-left: 3px;
+    }
+
+    .top .small-link {
+      text-decoration: underline;
+      text-decoration-color: #aeaaa0;
+      text-underline-offset: 4px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .intro {
+      position: relative;
+      padding: 102px 0 118px;
+      min-height: 585px;
+    }
+
+    .tiny {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 640;
+      letter-spacing: .02em;
+      color: var(--red);
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      font-size: clamp(57px, 8.2vw, 106px);
+      line-height: 1.08;
+      letter-spacing: -.068em;
+      max-width: 800px;
+      margin: 23px 0 25px;
+    }
+
+    h1 .accent {
+      color: var(--red);
+    }
+
+    .lead {
+      font-size: clamp(17px, 2.2vw, 21px);
+      line-height: 1.6;
+      max-width: 535px;
+      margin: 0 0 36px;
+    }
+
+    .read-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 2px solid var(--red);
+      padding: 5px 0 7px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .read-link:hover {
+      color: var(--red);
+    }
+
+    .read-link span {
+      font-size: 18px;
+      line-height: 1;
+      font-weight: 400;
+    }
+
+    .scribble {
+      position: absolute;
+      right: 4%;
+      bottom: 80px;
+      width: 151px;
+      transform: rotate(12deg);
+      color: var(--red);
+    }
+
+    .scribble svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .scribble span {
+      display: block;
+      text-align: center;
+      font: italic 15px Georgia, serif;
+      transform: rotate(-11deg);
+      padding-top: 4px;
+    }
+
+    .letter-zone {
+      border-top: 1px solid var(--line);
+      padding-top: 85px;
+      padding-bottom: 85px;
+    }
+
+    .above-letter {
+      display: flex;
+      gap: 20px;
+      align-items: baseline;
+      justify-content: space-between;
+      max-width: 740px;
+      margin: 0 auto 19px;
+    }
+
+    .above-letter h2 {
+      font: 400 29px/1.25 Georgia, serif;
+      letter-spacing: -.035em;
+      margin: 0;
+    }
+
+    .above-letter span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .paper {
+      position: relative;
+      background: var(--paper);
+      border: 1px solid #e9e5dd;
+      box-shadow: 5px 10px 0 #ebe7dd;
+      padding: clamp(34px, 7vw, 75px);
+      max-width: 740px;
+      margin: 0 auto;
+    }
+
+    .paper::before {
+      content: '';
+      position: absolute;
+      width: 69px;
+      height: 19px;
+      background: #e6d3b9b8;
+      left: 50%;
+      top: -10px;
+      transform: translateX(-50%) rotate(-5deg);
+    }
+
+    .greeting {
+      font: 400 35px/1.2 Georgia, serif;
+      letter-spacing: -.04em;
+      margin: 0 0 32px;
+    }
+
+    .paper p {
+      font-size: 16px;
+      line-height: 1.92;
+      margin: 0 0 22px;
+    }
+
+    .paper strong {
+      font-weight: 700;
+    }
+
+    .signature {
+      padding-top: 16px;
+      color: var(--red);
+      font: italic 24px/1.5 Georgia, serif !important;
+    }
+
+    .signoff {
+      margin-top: 26px;
+    }
+
+    .signoff-label {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .lucas-signature {
+      display: inline-block;
+      color: var(--red);
+      font-family:
+        "Snell Roundhand",
+        "Segoe Script",
+        "Brush Script MT",
+        "Apple Chancery",
+        cursive;
+      font-size: clamp(34px, 6vw, 56px);
+      line-height: 1.3;
+      letter-spacing: .02em;
+      transform: rotate(-4deg);
+      text-shadow: 1px 1px 0 rgba(0,0,0,.04);
+      padding: 8px 8px 15px 0;
+    }
+
+    .under-note {
+      margin: 37px auto 0;
+      text-align: center;
+      font: italic 15px/1.7 Georgia, serif;
+      color: var(--muted);
+    }
+
+    .change {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 14px 0 113px;
+    }
+
+    .change h2 {
+      font: 400 clamp(29px, 5vw, 42px)/1.25 Georgia, serif;
+      letter-spacing: -.045em;
+      margin: 0 0 15px;
+    }
+
+    .change > p {
+      margin: 0 0 25px;
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 530px;
+    }
+
+    .plain-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .plain-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 15px;
+    }
+
+    .plain-list li::before {
+      content: '↳';
+      color: var(--red);
+      font-size: 20px;
+      line-height: 1.35;
+    }
+
+    .end {
+      background: #eae5d9;
+      text-align: center;
+      padding: 72px 25px 77px;
+    }
+
+    .end p {
+      font: 400 clamp(29px, 5vw, 44px)/1.35 Georgia, serif;
+      letter-spacing: -.04em;
+      margin: 0 auto 17px;
+      max-width: 630px;
+    }
+
+    .end span {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    footer {
+      text-align: center;
+      padding: 27px 25px 31px;
+      color: #78776e;
+      font-size: 12px;
+    }
+
+    /* Mobil og mindre skærme */
+    @media (max-width: 640px) {
+      .frame {
+        padding-left: 23px;
+        padding-right: 23px;
+      }
+
+      .top {
+        padding-top: 20px;
+        padding-bottom: 18px;
+      }
+
+      .intro {
+        min-height: auto;
+        padding-top: 78px;
+        padding-bottom: 118px;
+      }
+
+      h1 {
+        font-size: clamp(44px, 12.2vw, 75px);
+        letter-spacing: -.064em;
+      }
+
+      .lead {
+        max-width: 390px;
+        font-size: 17px;
+      }
+
+      .scribble {
+        width: 90px;
+        right: 3%;
+        bottom: 8px;
+      }
+
+      .scribble span {
+        font-size: 11px;
+      }
+
+      .letter-zone {
+        padding-top: 62px;
+        padding-bottom: 75px;
+      }
+
+      .above-letter h2 {
+        font-size: 26px;
+      }
+
+      .above-letter span {
+        max-width: 130px;
+        text-align: right;
+      }
+
+      .paper {
+        padding: 39px 27px 34px;
+        box-shadow: 4px 7px 0 #ebe7dd;
+      }
+
+      .paper p {
+        font-size: 15.5px;
+        line-height: 1.87;
+      }
+
+      .greeting {
+        font-size: 31px;
+      }
+
+      .change {
+        padding-bottom: 83px;
+      }
+
+      .end {
+        padding: 65px 27px 69px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="top frame">
+    <a class="wordmark" href="#top">
+      til dig<span>♡</span>
+    </a>
+    <a class="small-link" href="#brev">mit brev</a>
+  </header>
+
+  <main id="top">
+
+    <!-- Forsiden -->
+    <section class="intro frame">
+      <span class="tiny">hej, Betina.</span>
+
+      <h1>
+        jeg har været<br>
+        et kæmpe <span class="accent">røvhul.</span>
+      </h1>
+
+      <p class="lead">
+        du har ikke fortjent den måde, jeg har
+        behandlet dig på. jeg ved godt, at et
+        “undskyld” ikke bare gør det hele godt igen.
+        men jeg mener det virkelig.
+      </p>
+
+      <a class="read-link" href="#brev">
+        læs det, jeg gerne vil sige
+        <span aria-hidden="true">↓</span>
+      </a>
+
+      <div class="scribble" aria-hidden="true">
+        <svg viewBox="0 0 150 115" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M75 99 C63 87 19 59 18 32 C17 6 50 6
+               73 28 C99 -2 132 14 132 37 C132 62
+               91 89 75 99Z"
+            stroke="currentColor"
+            stroke-width="2.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M72 100 C53 86 21 64 18 40"
+            stroke="currentColor"
+            stroke-width="1.2"
+            opacity=".46"
+            stroke-linecap="round"
+          />
+        </svg>
+        <span>jeg mener det.</span>
+      </div>
+    </section>
+
+    <!-- Brevet til Betina -->
+    <section id="brev" class="letter-zone frame">
+      <div class="above-letter">
+        <h2>et brev til Betina</h2>
+        <span>fra mig, helt uden undskyldninger</span>
+      </div>
+
+      <article class="paper">
+        <h3 class="greeting">Betina,</h3>
+
+        <p>
+          Jeg ved godt, at det her ikke ændrer på
+          det, der er sket. Men jeg ville gerne
+          skrive det ned, så du kan læse det,
+          når du har lyst.
+        </p>
+
+        <p>
+          <strong>
+            Jeg er virkelig ked af den måde,
+            jeg har behandlet dig på.
+          </strong>
+          Jeg har været en idiot, og jeg har ikke
+          tænkt nok over, hvordan mine ord og
+          handlinger har påvirket dig.
+          Det er mit ansvar. Ikke dit.
+        </p>
+
+        <p>
+          Du skal ikke være nødt til at bede mig
+          om at behandle dig ordentligt.
+          Det burde være en selvfølge.
+          Du fortjener, at jeg lytter til dig,
+          tager dig seriøst og viser dig respekt
+          — også når tingene ikke er nemme.
+        </p>
+
+        <p>
+          Jeg vil ikke prøve at bortforklare det
+          eller gøre det mindre, end det er.
+          Jeg har gjort dig ondt, og det er
+          jeg ked af.
+        </p>
+
+        <p>
+          Jeg ved også godt, at det er nemt at love,
+          at man vil gøre det bedre. Derfor vil
+          jeg ikke bare sige det.
+          <strong>
+            Jeg vil vise det i mine handlinger.
+          </strong>
+          I måden jeg taler til dig på, i måden
+          jeg lytter på, og i hvordan jeg er
+          der for dig.
+        </p>
+
+        <p>
+          Du skylder mig ikke at tilgive mig,
+          bare fordi jeg har skrevet det her.
+          Hvis du har brug for tid, så forstår
+          jeg det. Og hvis du har lyst til at
+          snakke, vil jeg gerne lytte uden
+          at gå i forsvar.
+        </p>
+
+        <p>
+          Jeg elsker dig, Betina, og jeg er
+          virkelig ked af, at jeg har
+          behandlet dig sådan.
+        </p>
+
+        <p class="signature">
+          undskyld, skat. ♡
+        </p>
+
+        <!-- Lucas' underskrift -->
+        <div class="signoff" aria-label="Underskrift">
+          <span class="signoff-label">
+            kærlig hilsen,
+          </span>
+          <span class="lucas-signature">
+            Lucas
+          </span>
+        </div>
+      </article>
+
+      <p class="under-note">
+        det skulle aldrig have været nødvendigt
+        at skrive det her.
+      </p>
+    </section>
+
+    <!-- Det jeg vil ændre -->
+    <section class="change frame">
+      <h2>
+        jeg ved, det handler om mere end ord.
+      </h2>
+
+      <p>
+        Der er nogle ting, jeg skal blive bedre til.
+        Ikke kun lige nu, men også fremover.
+      </p>
+
+      <ul class="plain-list">
+        <li>
+          At lytte til dig uden at gå i forsvar.
+        </li>
+        <li>
+          At tænke mig om, før jeg siger eller
+          gør noget, der sårer dig.
+        </li>
+        <li>
+          At behandle dig med den respekt og
+          omsorg, du fortjener — hver dag.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Afslutning -->
+    <section class="end">
+      <p>
+        jeg elsker dig.<br>
+        og jeg er ked af det.
+      </p>
+      <span>
+        du behøver ikke svare på det her. ♡
+      </span>
+    </section>
+
+  </main>
+
+  <footer>
+    kun til dig, Betina.
+  </footer>
+
+</body>
+</html>
